@@ -21,7 +21,7 @@ public class DirectionController {
     private static String getFolderByFormat(final String format) {
         String result = "";
         switch (format) {
-            case "jpeg":
+            case "jpg":
             case "png": result = "pictures"; break;
             case "mp3": result = "music"; break;
             case "py":

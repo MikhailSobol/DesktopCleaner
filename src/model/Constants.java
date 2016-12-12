@@ -24,7 +24,7 @@ public abstract class Constants {
 
     private static final HashSet<String> FILES_TYPES_WITH_SEPARATE_FOLDER = new HashSet<String>(5) {{
         add("mp3");
-        add("jpeg");
+        add("jpg");
         add("png");
         add("exe");
         add("java");
