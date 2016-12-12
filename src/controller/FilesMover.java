@@ -14,8 +14,7 @@ public class FilesMover {
             final String pathToMove = DirectionController.getPathToMove(file);
             DirectoryController.createDirectory(pathToMove);
             if (Files.exists(Paths.get(pathToMove + file.getName()))) {
-                file.delete();
-                continue;
+                new File(pathToMove + file.getName()).delete();
             }
             move(file, pathToMove);
         }
