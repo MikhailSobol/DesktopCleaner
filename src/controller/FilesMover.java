@@ -1,8 +1,6 @@
 package controller;
 
 
-import model.Constants;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -32,9 +30,8 @@ public class FilesMover {
         final int point = fileName.indexOf(".");
         final String fileFormat = point > 0 ? fileName.substring(point + 1) : "";
         final String fileCurrentName = fileName.substring(0, point);
-        final String newName = "".equals(fileFormat) ? fileCurrentName + "(" + counter + ")" :
-                fileCurrentName + "(" + counter + ")" + "." + fileFormat;
-        return newName;
+        return "".equals(fileFormat) ? (fileCurrentName + "(" + counter + ")") :
+                (fileCurrentName + "(" + counter + ")" + "." + fileFormat);
     }
 
     private static void move(final File file,
